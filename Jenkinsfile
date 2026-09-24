@@ -45,7 +45,7 @@ pipeline {
                 sshagent(['ec2-deploy-key']) {
 
                     bat '''
-                    scp -o StrictHostKeyChecking=no index.html style.css script.js ec2-user@3.110.213.157:/tmp/
+                    scp -o StrictHostKeyChecking=no index.html style.css script.js ec2-user@13.234.18.166:/tmp/
                     '''
 
                     bat '''
