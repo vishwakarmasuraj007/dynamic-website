@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Dynamic Website using Automatic CI/CD Pipeline</title>
+    <title>Dynamic Website | CI/CD Project</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor="cyan">
+<body>
 
     <!-- Navbar -->
     <nav class="navbar">
 
-        <h2>MyWebsite</h2>
+        <div class="logo">
+            <span>⚡</span> MyWebsite
+        </div>
 
         <div class="nav-links">
             <a href="#home">Home</a>
@@ -22,7 +25,7 @@
             <a href="#about">About</a>
         </div>
 
-        <button id="themeButton">🌙</button>
+        <button id="themeButton" class="theme-btn">🌙</button>
 
     </nav>
 
@@ -30,29 +33,55 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
 
-        <div>
+        <div class="hero-content">
 
-            <h1>Welcome to My Dynamic Website</h1>
+            <div class="badge">
+                🚀 Automated CI/CD Pipeline
+            </div>
+
+            <h1>
+                Welcome to
+                <span>My Dynamic Website</span>
+            </h1>
 
             <p id="welcomeText">
                 Loading...
             </p>
 
-            <button onclick="showMessage()">
-                Click Me
-            </button>
+            <div class="hero-buttons">
+
+                <button onclick="showMessage()" class="primary-btn">
+                    Explore Website →
+                </button>
+
+                <a href="#services" class="secondary-btn">
+                    View Services
+                </a>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- Counter Section -->
-    <section class="counter">
+    <!-- Stats Section -->
+    <section class="stats">
 
-        <h2>Website Visitors</h2>
+        <div class="stat-card">
+            <h2 id="visitorCount">0</h2>
+            <p>Website Visitors</p>
+        </div>
 
-        <h1 id="visitorCount">0</h1>
+        <div class="stat-card">
+            <h2>99.9%</h2>
+            <p>Deployment Goal</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>24/7</h2>
+            <p>Availability</p>
+        </div>
 
     </section>
 
@@ -60,7 +89,17 @@
     <!-- Services -->
     <section id="services" class="services">
 
-        <h2>Our Services</h2>
+        <div class="section-heading">
+
+            <span>WHAT WE DO</span>
+
+            <h2>Our Services</h2>
+
+            <p>
+                Modern web and cloud technologies powered by automation.
+            </p>
+
+        </div>
 
         <div id="serviceContainer" class="cards">
             <!-- JavaScript will add cards here -->
@@ -72,20 +111,72 @@
     <!-- About -->
     <section id="about" class="about">
 
-        <h2>About Us</h2>
+        <div class="about-content">
 
-        <p>
-            This website is created using HTML, CSS and JavaScript.
-        </p>
+            <div>
 
-        <p id="currentTime"></p>
+                <span class="section-label">
+                    ABOUT THE PROJECT
+                </span>
+
+                <h2>
+                    Built with Modern Web Technologies
+                </h2>
+
+                <p>
+                    This website is created using HTML, CSS and JavaScript
+                    and deployed through an automated CI/CD pipeline.
+                </p>
+
+                <p>
+                    Every code change can be automatically tested,
+                    built and deployed to the production server.
+                </p>
+
+            </div>
+
+            <div class="tech-box">
+
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>Jenkins</div>
+                <div>AWS EC2</div>
+                <div>Nginx</div>
+
+            </div>
+
+        </div>
 
     </section>
 
 
+    <!-- Current Time -->
+    <section class="time-section">
+
+        <p>Current Server Time</p>
+
+        <h2 id="currentTime">
+            Loading...
+        </h2>
+
+    </section>
+
+
+    <!-- Footer -->
     <footer>
 
-        <p>© 2026 MyWebsite</p>
+        <div class="footer-logo">
+            ⚡ MyWebsite
+        </div>
+
+        <p>
+            Built with HTML • CSS • JavaScript • Jenkins • AWS
+        </p>
+
+        <p>
+            © 2026 MyWebsite | CI/CD Demo Project
+        </p>
 
     </footer>
 
@@ -93,4 +184,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
